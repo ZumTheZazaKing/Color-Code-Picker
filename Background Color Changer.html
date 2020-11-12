@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<style>
+
+		#main{
+			width:300px;
+			height:260px;
+			border: 4px solid black;
+			border-collapse:collapse;
+			border-radius:50px;
+			margin-left:auto;
+			margin-right: auto;
+			margin-top: 280px;
+			text-align: center;
+			background-color:white;
+		}
+
+		#colorCodeText{
+			font-family:Calibri, Arial, sans-serif;
+			font-size:20px;
+		}
+
+		#colorCode{
+			border:3px solid black;
+		}
+
+		#colorButton{
+			background-color:yellow;
+			width:160px;
+			height:40px;
+			border-radius: 100px;
+			font-weight:bold;
+		}
+
+		#colorText{
+			font-family:Calibri, Arial, sans-serif;
+			font-weight: bold;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id=main>
+
+		<p id=colorCodeText><b>Color Code:</b></p>
+
+		<input type="text" id="colorCode"><br>
+
+		<p id=colorText>Choose a Color</p><input type="color" id="colorInput"><br><br>
+
+		<input type="submit" id="colorButton" value="Click to Preview Color" onclick="changeColor()">
+
+
+		
+
+	</div>
+
+
+	<script>
+
+		function changeColor(){
+			let color = document.getElementById("colorInput").value;
+			document.body.style.backgroundColor = color;
+			document.getElementById('colorCode').value = color;
+		}
+
+	</script>
+
+</body>
+
+</html>
